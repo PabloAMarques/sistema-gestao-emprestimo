@@ -11,7 +11,7 @@ Certifique-se de ter o Docker e o Docker Compose instalados em sua máquina ante
 1. Clone o repositório do projeto:
 
 ```bash
-git clone <URL_DO_REPOSITÓRIO>
+git clone <link do repositorio>
 cd sistema-gestao-propostas-emprestimo
 ```
 
