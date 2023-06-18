@@ -1,0 +1,27 @@
+<!-- proposal_form.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulário de Proposta</title>
+</head>
+<body>
+    <h1>Formulário de Proposta</h1>
+    <form method="POST" action="{% url 'create_proposal' %}">
+        {% csrf_token %}
+        <label for="full_name">Nome completo:</label>
+        <input type="text" name="full_name" id="full_name" required><br><br>
+        
+        <label for="cpf">CPF:</label>
+        <input type="text" name="cpf" id="cpf" required><br><br>
+        
+        <label for="address">Endereço:</label>
+        <input type="text" name="address" id="address" required><br><br>
+        
+        <label for="loan_amount">Valor do empréstimo:</label>
+        <input type="number" name="loan_amount" id="loan_amount" required><br><br>
+        
+        <input type="submit" value="Enviar Proposta">
+    </form>
+</body>
+</html>
