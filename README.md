@@ -6,7 +6,8 @@ O sistema permite que os usuários cadastrem propostas de empréstimo pessoal, p
 
 ## Configuração do Ambiente
 
-Certifique-se de ter o Docker e o Docker Compose instalados em sua máquina antes de prosseguir.
+Certifique-se de ter o Postgresql 13, Docker e o Docker Compose instalados em sua máquina antes de prosseguir.
+
 
 1. Clone o repositório do projeto:
 
@@ -15,7 +16,7 @@ git clone <link do repositorio>
 cd sistema-gestao-propostas-emprestimo
 ```
 
-2. Crie um arquivo `.env` na raiz do projeto com as seguintes variáveis de ambiente:
+2. Crie um arquivo `.env` na raiz do projeto com as seguintes variáveis de ambiente(caso nao tehha ainda):
 
 ```plaintext
 SECRET_KEY=seu_secret_key_aqui
@@ -46,6 +47,7 @@ docker-compose exec web bash
 ```bash
 python manage.py migrate
 python manage.py createsuperuser
+python manage.py runserver
 ```
 
 Siga as instruções para criar um usuário administrador.
@@ -53,7 +55,7 @@ Siga as instruções para criar um usuário administrador.
 6. Acesse o admin do Django em seu navegador:
 
 ```
-http://localhost:8000/admin/
+http://127.0.0.1:8000/admin/
 ```
 
 Faça login com as credenciais do usuário administrador para acessar a interface de administração.
@@ -71,7 +73,7 @@ docker-compose down
 Acesse a página de preenchimento da proposta em seu navegador:
 
 ```
-http://localhost:8000/propostas/
+http://127.0.0.1:8000/propostas/
 ```
 
 Preencha todos os campos solicitados e envie a proposta. Após o envio, a proposta será processada em segundo plano e o status será atualizado no banco de dados.
@@ -81,7 +83,7 @@ Preencha todos os campos solicitados e envie a proposta. Após o envio, a propos
 Acesse o admin do Django em seu navegador:
 
 ```
-http://localhost:8000/admin/
+http://127.0.0.1:8000/admin/
 ```
 
 Faça login com as credenciais do usuário administrador.
