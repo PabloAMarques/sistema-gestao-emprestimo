@@ -6,7 +6,7 @@ O sistema permite que os usuários cadastrem propostas de empréstimo pessoal, p
 
 ## Configuração do Ambiente
 
-Certifique-se de ter o Postgresql 13, Docker e o Docker Compose instalados em sua máquina antes de prosseguir.
+Certifique-se de ter o Postgresql 13, Docker e o Docker Compose instalados em sua máquina antes de prosseguir e crie um banco de dados no Postgre com nome "loans".
 
 
 1. Clone o repositório do projeto:
